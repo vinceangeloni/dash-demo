@@ -6,22 +6,7 @@
         <link rel="stylesheet" href="css/master.css" type="text/css"/>
         <script src="js/jquery.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
-        <script type="text/javascript">
-			$(document).ready(function() {
-				$("#columnA").sortable({ opacity: 0.6, connectWith: '#columnB', forcePlaceholderSize: true });
-				$("#columnB").sortable({ opacity: 0.6, connectWith: '#columnA', forcePlaceholderSize: true });
-				$(".boxSmall, .boxLarge").hover(function() {
-					$(this).prepend('<span class="closeButton"></span>');
-					$(".closeButton").click(function() {
-						$(this).parent().remove(); 
-					});
-				},
-				function() {
-					$(".closeButton").remove();
-				});
-				
-			});
-		</script>
+        <script src="js/init.js"></script>
 	</head>
 
 	<body>
