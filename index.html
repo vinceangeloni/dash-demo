@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>Dashboard Demo</title>
+        <link rel="stylesheet" href="css/master.css" type="text/css"/>
+        <script src="js/jquery.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
+        <script type="text/javascript">
+			$(document).ready(function() {
+				$("#columnA").sortable({ opacity: 0.6, connectWith: '#columnB', forcePlaceholderSize: true });
+				$("#columnB").sortable({ opacity: 0.6, connectWith: '#columnA', forcePlaceholderSize: true });
+				$(".boxSmall, .boxLarge").hover(function() {
+					$(this).prepend('<span class="closeButton"></span>');
+					$(".closeButton").click(function() {
+						$(this).parent().remove(); 
+					});
+				},
+				function() {
+					$(".closeButton").remove();
+				});
+				
+			});
+		</script>
+	</head>
+
+	<body>
+    	<div id="content">
+    		<div id="header">
+    			<div id="headerContent">
+                	<ul id="headerDropDown">
+                    	<li><a href="#" class="icon-droparrow">Vince Angeloni</a>
+                            <ul>
+                                <li><a href="#">Edit Profile</a></li>
+                                <li><a href="#">Settings</a></li>
+                            </ul>
+                        </li>
+                  </ul>
+              </div>
+    		</div>
+            <div id="dashContent">
+            	<div id="dashHeader">
+                	<span class="headerTitle"><span class="iconLarge icon-dashboard">Dashboard</span></span>
+                </div>
+                <div id="dashToolbar">
+                	<span class="smallFont">Today</span>
+                    <a href="#" class="standardButton rightFloat"><span class="iconSmall icon-add">Add</span></a>
+                </div>
+            	<ul id="dashColumns">
+                	<li id="columnA">
+                    	<div class="boxSmall">
+                        	<span class="boxTitle">Heart Rate</span>
+                            <span class="boxlargeFont">83</span>
+                            <img src="images/heart.png">
+                            <img class="rightFloat" style="margin-top:-18px;" src="images/monitor.png">
+                        </div>
+                        <div class="boxSmall">
+                        	<span class="boxTitle">Drinks Consumed</span>
+                            <span class="boxlargeFont">24</span>
+                            <span class="boxsmallFont"><span class="iconXSmall icon-arrow-up">36%</span></span>
+                            <div id="drinksData">
+                                <ul>
+                                    <li class="boxdataFont"><span class="redText">78%</span> Coffee</li>
+                                    <li class="boxdataFont"><span class="redText">12%</span> Pepsi</li>
+                                    <li class="boxdataFont"><span class="redText">10%</span> Water</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="boxSmall">
+                        	<span class="boxTitle">Hours Slept</span>
+                            <span class="boxmedFont">6</span>
+                            <div class="progressBarBase">
+                            	<div class="progressBar"></div>
+                            </div>
+                            <div class="boxsmallFont textRight" style="margin-top: 7px;"><span class="iconXSmall icon-arrow-down">86%</span></div>
+                        </div>
+                    </li>
+                    <li id="columnB">
+                    	<div class="boxLarge">
+                        	<span class="boxTitle">Food Consumed</span>
+                            
+                            <div id="graphBox">
+                            <div id="graphLegend">
+                            	<span class="iconSmall icon-legend-today"><span class="boxxsmallFont">Today</span></span>
+                                <span class="iconSmall icon-legend-yesterday"><span class="boxxsmallFont">Yesterday</span></span>
+                            </div>
+                            	<ul class="first">
+                                    <li><span class="grayBar" style="height:75%"></span></li>
+                                    <li><span class="redBar" style="height: 45%"></span></li>
+                                </ul>
+                                <ul>
+                                    <li><span class="grayBar" style="height:95%"></span></li>
+                                    <li><span class="redBar" style="height: 90%"></span></li>
+                                </ul>
+                                <ul>
+                                    <li><span class="grayBar" style="height:25%"></span></li>
+                                    <li><span class="redBar" style="height: 15%"></span></li>
+                                </ul>
+                                <ul>
+                                    <li><span class="grayBar" style="height:78%"></span></li>
+                                    <li class="last"><span class="redBar" style="height: 85%"></span></li>
+                                </ul>
+                            </div>
+                            <div id="graphData">
+                            	<ul>
+                                	<li><span class="boxdataFont">Meat</span></li>
+                                    <li><span class="boxsmallFont"><span class="iconXSmall icon-arrow-down">34%</span></span></li>
+                               	</ul>
+                                <ul>
+                                	<li><span class="boxdataFont">Dairy</span></li>
+                                    <li><span class="boxsmallFont"><span class="iconXSmall icon-arrow-down">8%</span></span></li>
+                               	</ul>
+                                <ul>
+                                	<li><span class="boxdataFont">Vegetables</span></li>
+                                    <li><span class="boxsmallFont"><span class="iconXSmall icon-arrow-down">22%</span></span></li>
+                               	</ul>
+                                <ul class="last">
+                                	<li><span class="boxdataFont">Fruit</span></li>
+                                    <li><span class="boxsmallFont"><span class="iconXSmall icon-arrow-up">32%</span></span></li>
+                               	</ul>
+                            </div>
+                        </div>
+                        <div class="boxSmall">
+                        	<span class="boxTitle">High Fives</span>
+                            <span class="boxlargeFont">8</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+    	</div>
+	</body>
+</html>

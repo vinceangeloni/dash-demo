@@ -1,0 +1,429 @@
+/* Master CSS Document */
+/* Dashboard demo */
+/* Vince Angeloni - 2011 */
+/* http://www.vinceangeloni.com */
+
+
+body, html {
+	background: #d9dfe2 url(../images/bgTile.jpg) repeat;
+	margin: 0;
+	padding: 0;
+}
+
+/* Layout */
+
+#content {
+	width: 100%;
+}
+
+#header {
+	width: 100%;
+	background: #66757d;
+	height: 105px;
+	border-bottom: #eaeef0 1px solid;
+	-webkit-box-shadow: inset 0 -5px 20px #576770;
+	-moz-box-shadow: inset 0 -5px 20px #576770;
+	box-shadow: inset 0 -5px 20px #576770;
+}
+#headerContent {
+	width: 800px;
+	height: 105px;
+	margin: 0 auto;
+}
+
+#dashContent {
+	width: 800px;
+	min-height: 500px;
+	margin: 0 auto;
+}
+#dashHeader {
+	width: 788px;
+	height: 20px;
+	padding: 20px 0 8px 12px;
+	background: url(../images/separator.png) repeat-x bottom left;
+}
+#dashToolbar {
+	width: 788px;
+	height: 20px;
+	padding: 15px 0 0 12px;
+}
+
+ul#dashColumns {
+	display: block;
+	list-style: none;
+	margin: 13px 0 0 0;
+	padding: 0;
+}
+ul#dashColumns #columnA {
+	width: 390px;
+	margin-right: 20px;
+	min-height: 200px;
+	float: left;
+	display: block;
+}
+ul#dashColumns #columnB {
+	width: 390px;
+	margin-right: 0px;
+	min-height: 200px;
+	float: left;
+	display: block;
+}
+
+
+/* Boxes */
+
+.boxSmall, .boxLarge {
+	width: 94%;
+	height: 84px;
+	padding: 12px;
+	background: #f1f4f5;
+	border: #939b9f 1px solid;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+	-webkit-box-shadow: 0 1px 5px #c3c9cc, inset 0 1px 0 #fff ;
+	-moz-box-shadow: 0 1px 5px #c3c9cc, inset 0 1px 0 #fff ;
+	box-shadow: 0 1px 5px #c3c9cc, inset 0 1px 0 #fff ;
+	margin-bottom: 20px;
+	cursor:move;
+}
+.boxLarge {
+	height: 214px;
+}
+
+/* Buttons */
+
+.standardButton {
+	min-width: 50px;
+	padding: 6px 6px 6px 6px;
+	margin-top: -6px;
+	border: #93989a 1px solid;
+	text-align: center;
+	color: #55585a;
+	text-decoration: none;
+	text-shadow: 0 1px 0 #ebf2f5;
+	font-size: 12px;
+	font-weight: bold;
+	-webkit-box-shadow: inset 0 1px 0 #fff;
+	-moz-box-shadow: inset 0 1px 0 #fff;
+	box-shadow: inset 0 1px 0 #fff;
+	-webkit-border-radius: 14px;
+	-moz-border-radius: 14px;
+	border-radius: 14px;
+	background-image: linear-gradient(bottom, rgb(186,189,191) 2%, rgb(208,211,213) 62%, rgb(223,226,228) 100%);
+	background-image: -o-linear-gradient(bottom, rgb(186,189,191) 2%, rgb(208,211,213) 62%, rgb(223,226,228) 100%);
+	background-image: -moz-linear-gradient(bottom, rgb(186,189,191) 2%, rgb(208,211,213) 62%, rgb(223,226,228) 100%);
+	background-image: -webkit-linear-gradient(bottom, rgb(186,189,191) 2%, rgb(208,211,213) 62%, rgb(223,226,228) 100%);
+	background-image: -ms-linear-gradient(bottom, rgb(186,189,191) 2%, rgb(208,211,213) 62%, rgb(223,226,228) 100%);
+}
+.standardButton:hover {
+	-webkit-box-shadow: inset 0 -1px 0 #ccc;
+	-moz-box-shadow: inset 0 -1px 0 #ccc;
+	box-shadow: inset 0 -1px 0 #ccc;
+}
+.closeButton {
+	width: 23px;
+	height: 23px;
+	background: url(../images/buttonClose.png) no-repeat top left;
+	float: right;
+	margin-top: -20px;
+	margin-right: -20px;
+	cursor: pointer;
+}
+#headerDropDown {
+	margin: 0;
+	padding: 0;
+	position: relative;
+	z-index: 9999;
+}
+#headerDropDown > li {
+	min-width: 50px;
+	padding: 10px;
+	background: #74858e;
+	border: #4c575d 1px solid;
+	float: right;
+	margin: 35px 0 0 0;
+	list-style: none;
+	-webkit-box-shadow: 0 1px 0 #5b6972, inset 0 1px 0 #8295a0;
+	-moz-box-shadow: 0 1px 0 #5b6972, inset 0 1px 0 #8295a0;
+	box-shadow: 0 1px 0 #5b6972, inset 0 1px 0 #8295a0;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	background-image: linear-gradient(bottom, rgb(98,112,119) 20%, rgb(115,132,141) 86%);
+	background-image: -o-linear-gradient(bottom, rgb(98,112,119) 20%, rgb(115,132,141) 86%);
+	background-image: -moz-linear-gradient(bottom, rgb(98,112,119) 20%, rgb(115,132,141) 86%);
+	background-image: -webkit-linear-gradient(bottom, rgb(98,112,119) 20%, rgb(115,132,141) 86%);
+	background-image: -ms-linear-gradient(bottom, rgb(98,112,119) 20%, rgb(115,132,141) 86%);
+}
+#headerDropDown > li > a, #headerDropDown > li > a:visited {
+	text-decoration: none;
+	color: #f6fafc;
+	text-shadow: 0 1px 0 #485a64;
+	font-size: 13px;
+	font-weight: 500;
+}
+#headerDropDown > li > ul {
+	display: none;
+	background: #3d464b;
+	position: absolute;
+	list-style: none;
+	padding: 30px 10px 5px 10px;
+	margin: -2px 0 0 -10px;
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+	border: #2a3033 1px solid;
+}
+#headerDropDown > li:hover > ul {
+	display: block;
+	z-index: -1;
+}
+#headerDropDown > li > ul > li {
+	margin-bottom: 12px;
+}
+#headerDropDown > li > ul > li > a {
+	display: block;
+	color: #edf3f5;
+	text-shadow: 0 1px 0 #171b1e;
+	text-decoration: none;
+	font-size: 13px;
+	width: 113px;
+}
+#headerDropDown li ul li a:hover {
+	text-decoration: underline;
+}
+
+
+/* Typography */
+
+body {
+	font-family: Helvetica, Arial, Sans-Serif;
+}
+
+.boxTitle {
+	font-weight: bold;
+	font-size: 14px;
+	color: #494949;
+	display: block;
+	margin-bottom: 10px;
+}
+.headerTitle {
+	color: #6c757b;
+	font-size: 17px;
+	text-shadow: 0 1px 0 #ebf2f5;
+	font-weight: bold; 
+}	
+.smallFont {
+	color: #6c757b;
+	font-size: 14px;
+	text-shadow: 0 1px 0 #ebf2f5;
+	font-weight: bold; 
+}
+.boxlargeFont {
+	font-size: 68px;
+	font-weight: bold;
+	color: #494949;
+	line-height: 0.8em;
+}
+.boxmedFont {
+	font-size: 36px;
+	font-weight: bold;
+	color: #494949;
+	line-height: 0.8em;
+}
+.boxsmallFont {
+	font-size: 18px;
+	font-weight: bold;
+	color: #494949;
+}
+.boxxsmallFont {
+	font-size: 12px;
+	font-weight: bold;
+	color: #494949;
+}
+.boxdataFont {
+	font-size: 14px;
+	font-weight: bold;
+	color: #494949;
+	margin-top: 7px;
+}
+.redText {
+	color: #df5b71;
+}
+
+/* Progress bar */
+
+.progressBarBase {
+	width: 90%;
+	height: 30px;
+	background: #e4e8e9;
+	border: #bdc2c3 1px solid;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	-webkit-box-shadow: inset -2px 2px 4px #d6d9da;
+	-moz-box-shadow: inset -2px 2px 4px #d6d9da;
+	box-shadow: inset -2px 2px 4px #d6d9da;
+	float: right;
+}
+.progressBar {
+	width: 60%;
+	height: 30px;
+	background: #df5b71  url(../images/progressBG.jpg) repeat left top;
+	border: #a33547 1px solid;
+	margin: -1px 0 0 -1px;
+	padding: 0;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	-webkit-box-shadow: inset 0 1px 0 #f6647d;
+	-moz-box-shadow: inset 0 1px 0 #f6647d;
+	box-shadow: inset 0 1px 0 #f6647d;
+}
+
+/* Graph */
+#graphLegend {
+	position: absolute;
+	right: 0;
+	top: -28px;
+}
+#graphBox {
+	width: 100%;
+	height: 140px;
+	border-bottom: #6b6c6c 1px solid;
+	position: relative;
+	float: left;
+}
+#graphBox ul {
+	list-style: none;
+	margin: 0 0 0 23px;
+	padding: 0;
+	float: left;
+}
+#graphBox ul.first {
+	margin: 0;
+}
+#graphBox ul li {
+	position: relative;
+	float: left;
+	display: inline;
+	width: 30px;
+	height: 135px;
+	margin-top: 5px;
+	margin-right: 8px;
+}
+#graphBox ul li.last {
+	margin-right: 0;
+}
+#graphBox li span.grayBar {
+	width: 30px;
+	height: 0px;
+	border: #adaeae 1px solid;
+	background: #d2d3d3 url(../images/barBG-gray.jpg) repeat left top;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	-webkit-box-shadow: inset 0 1px 0 #dfdfdf;
+	-moz-box-shadow: inset 0 1px 0 #dfdfdf;
+	box-shadow: inset 0 1px 0 #dfdfdf;
+	position: absolute;
+	display: block;
+	bottom: 0;
+	left: 0;
+}
+#graphBox li span.redBar {
+	width: 30px;
+	height:0px;
+	border: #a33547 1px solid;
+	background: #df5b71 url(../images/barBG.jpg) repeat left top;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	-webkit-box-shadow: inset 0 1px 0 #f6647d;
+	-moz-box-shadow: inset 0 1px 0 #f6647d;
+	box-shadow: inset 0 1px 0 #f6647d;
+	position: absolute;
+	display: block;
+	bottom: 0;
+	left: 0;
+}
+#graphData {
+	float: left;
+}
+#graphData ul {
+	list-style: none;
+	width: 72px;
+	margin: 5px 26px 0 0;
+	padding: 0;
+	float: left;
+}
+#graphData ul.last {
+	margin-right: 0;
+}
+
+#graphData li {
+	text-align: center;
+}
+
+/* Misc box data */
+
+#drinksData {
+	float: right;
+	margin-top: -15px;
+}
+#drinksData ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+
+
+/* Icons */
+
+.iconSmall {
+	height: 100%;
+	padding-left: 16px;
+}
+.iconXSmall {
+	padding-left: 13px;
+	height: 100%;
+}
+.iconLarge {
+	height: 100%;
+	padding-left: 25px;
+}
+.icon-add {
+	background: url(../images/icon-add.png) no-repeat;
+}
+.icon-dashboard {
+	background: url(../images/icon-dashboard.png) no-repeat left top;
+}
+.icon-arrow-down {
+	background: url(../images/icon-arrow-down.png) no-repeat left center;
+}
+.icon-arrow-up {
+	background: url(../images/icon-arrow-up.png) no-repeat left center;
+}
+.icon-droparrow {
+	padding-right: 28px;
+	background: url(../images/icon-droparrow.png) no-repeat right 5px;
+}
+.icon-legend-today {
+	background: url(../images/icon-today.png) no-repeat left 4px;
+}
+.icon-legend-yesterday {
+	background: url(../images/icon-yesterday.png) no-repeat left 4px;
+}
+
+
+/* Alignment */
+
+.textRight {
+	text-align: right !important;
+}
+.leftFloat {
+	float: left !important;
+}
+.rightFloat {
+	float:right !important;
+}
+
